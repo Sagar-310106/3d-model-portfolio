@@ -1,0 +1,124 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    background-color: #e2e1e1;
+    font-family: "Poppins", sans-serif;
+    color: #001233;
+    overflow-x: hidden;
+    
+}
+
+.robot{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.25);
+    z-index: 1;
+    position: fixed;
+    top: 80px;
+    left: 0;
+}
+
+.nav-container{
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40vw;
+    padding: 20px;
+    border-radius: 100px;
+    margin: 20px;
+    position: fixed;
+    z-index: 5;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+    font-size: large;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #7d8597;
+}
+
+.nav-links a:hover{
+    text-decoration: underline;
+    color: #464649;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+.landing-page{
+    width: 100vw;
+    height: 85vh;
+}
+
+.about{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+
+    body{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .nav-container{
+        height: 10vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0; 
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100px;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        text-align: right;
+        font-size: 0.9rem;
+    }
+    
+    .hamburger-menu {
+        display: block;
+    }
+
+    .robot{
+        width: 100%;
+        height: 100%;
+        transform: scale(1.25);
+        z-index: 1;
+        position: fixed;
+        top: 80px;
+        left: 0;
+    }
+}
